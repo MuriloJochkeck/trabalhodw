@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+         let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+    </script>
+</head>
+
+
+
+<body>
+    <div class="menu">
+        <img src="Imagens/logo2.png" alt="">
+         <ul>
+            <li><img src="Imagens/lupa-unscreen.gif" alt=""><input type="search" value=""></li>
+            <li><img src="Imagens/balao-de-fala-unscreen.gif" alt=""><a href="a" target="_blank">Quem Somos?</a></li>
+            <li><img src="Imagens/questionario-unscreen.gif" alt=""><a href="." target="_blank">Central de Ajuda</a></li>
+            <li><img src="Imagens/perfil-unscreen.gif" alt=""><a href="b" target="_blank">Login</a></li>
+        </ul>
+    </div>
+
+    
+    <div class="banner">
+      <img src="Imagens/banner.png" alt="" style="width: 100%; height: 100%;">
+    </div>
+
+    <h2 class="destinos">PRINCIPAIS DESTINOS BRASILEIROS</h2>
+    <div class="destinosbrasil">
+       
+        <div class="imagemmaior">
+            <a href=""><img src="Imagens/cristoredentor.jpeg" alt="Imagem Maior"></a>
+        </div>
+        <div class="imgmenores">
+            <div class="imgmenorescoluna">
+                <div class="imgmenor">
+                  <a href=""><img src="Imagens/fernandonoronha.jpeg" alt="Imagem 1"></a>
+                    <div>
+                        <h4>Fernando de Noronha</h4>
+                        <p>Paraíso natural com águas cristalinas, <br> ideal para mergulho e trilhas em meio <br> à natureza.</p>
+                    </div>
+                </div>
+                <div class="imgmenor">
+                  <a href=""><img src="Imagens/rj.jpeg" alt="Imagem 2"></a>
+                    <div>
+                        <h4>Rio de Janeiro</h4>
+                        <p>Conhecida como "Cidade Maravilhosa", <br> com praias icônicas, o Cristo Redentor <br>e uma cultura vibrante.</p>
+                    </div>
+                </div>
+                <div class="imgmenor">
+                  <a href=""><img src="Imagens/salvador.jpeg" alt="Imagem 3"></a>
+                    <div>
+                        <h4>Salvador</h4>
+                        <p>Rica em cultura e história, famosa pelo <br>Pelourinho e sua deliciosa culinária <br>afro-brasileira.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="imgmenorescoluna">
+                <div class="imgmenor">
+                  <a href=""><img src="Imagens/foz.jpeg" alt="Imagem 4"></a>
+                    <div>
+                        <h4>Foz do Iguaçu</h4>
+                        <p>Lar das impressionantes Cataratas do Iguaçu,<br> um espetáculo da natureza imperdível.</p>
+                    </div>
+                </div>
+                <div class="imgmenor">
+                  <a href=""><img src="Imagens/gramado.jpeg" alt="Imagem 5"></a>
+                    <div>
+                        <h4>Gramado</h4>
+                        <p>Destino romântico na Serra Gaúcha, famoso <br>por seus chocolates e clima acolhedor.</p>
+                    </div>
+                </div>
+                <div class="imgmenor">
+                  <a href=""><img src="Imagens/lencois.jpeg" alt="Imagem 6"></a>
+                    <div>
+                        <h4>Lençois Maranhanhenses</h4>
+                        <p>Deserto de dunas brancas e lagoas, <br>ideal para aventuras em meio à natureza.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+<h1 class="destinos">PRINCIPAIS DESTINOS EUROPEUS</h1>
+ 
+<div class="slidess">
+
+   
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+        <img src="Imagens/paris.jpeg" style="width:100%; height: auto;">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+        <img src="Imagens/roma.jpeg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+        <img src="Imagens/londres.jpeg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+        <img src="Imagens/lisboa.jpeg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+        <img src="Imagens/santorini.jpeg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+        <img src="Imagens/amterdam.jpeg" style="width:100%">
+    </div>
+  
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+
+    <div class="caption-destinosbrasil">
+      <p id="caption"></p>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="Imagens/paris.jpeg" style="width:100%" onclick="currentSlide(1)" alt="Paris - França">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="Imagens/roma.jpeg" style="width:100%" onclick="currentSlide(2)" alt="Roma - Itália">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="Imagens/londres.jpeg" style="width:100%" onclick="currentSlide(3)" alt="Londres - Inglaterra">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="Imagens/lisboa.jpeg" style="width:100%" onclick="currentSlide(4)" alt="Lisboa - Portugal">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="Imagens/santorini.jpeg" style="width:100%" onclick="currentSlide(5)" alt="Santorini - Grécia">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="Imagens/amterdam.jpeg" style="width:100%" onclick="currentSlide(6)" alt="Amsterdam - Países Baixos">
+      </div>
+    </div>
+  </div>
+  
+  <div class="pacotes">
+    <img src="Imagens/pacotes.png" alt="" class="imagem1p">
+    <a href=""><img src="Imagens/maldivas.jpeg" alt="" class="imagem2p"></a>
+    <a href=""><img src="Imagens/disney.jpeg" alt="" class="imagem3p"></a>
+    <a href=""><img src="Imagens/safari.jpeg" alt="" class="imagem4p"></a>
+    <a href=""><img src="Imagens/patagonia.jpeg" alt="" class="imagem5p"></a>
+    <a href=""><img src="Imagens/bali.jpeg" alt="" class="imagem6p"></a>
+</div>
+
+
+<div class="cruzeiro">
+  <a href=""><img src="Imagens/cruzeiro1.jpg" alt="" class="cruzimg1"></a>
+  <a href=""><img src="Imagens/cruzeiro3.jpg" alt="" class="cruzimg2" ></a>
+  <img src="Imagens/cruzeirovdd.png" alt="" class="cruzimg">
+</div>
+
+    <footer>
+        <h1>Desenvolvido por Murilo Victor Jochkeck - 1F</h1>
+    </footer>
+</body>
+</html>
